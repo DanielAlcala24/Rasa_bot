@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-correo",
+      "2": "I-correo",
+      "3": "L-correo",
+      "4": "U-correo",
+      "5": "B-edad",
+      "6": "I-edad",
+      "7": "L-edad",
+      "8": "U-edad",
+      "9": "B-nacimiento",
+      "10": "I-nacimiento",
+      "11": "L-nacimiento",
+      "12": "U-nacimiento",
+      "13": "B-nombre",
+      "14": "I-nombre",
+      "15": "L-nombre",
+      "16": "U-nombre",
+      "17": "B-numero",
+      "18": "I-numero",
+      "19": "L-numero",
+      "20": "U-numero",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-correo": 1,
+      "I-correo": 2,
+      "L-correo": 3,
+      "U-correo": 4,
+      "B-edad": 5,
+      "I-edad": 6,
+      "L-edad": 7,
+      "U-edad": 8,
+      "B-nacimiento": 9,
+      "I-nacimiento": 10,
+      "L-nacimiento": 11,
+      "U-nacimiento": 12,
+      "B-nombre": 13,
+      "I-nombre": 14,
+      "L-nombre": 15,
+      "U-nombre": 16,
+      "B-numero": 17,
+      "I-numero": 18,
+      "L-numero": 19,
+      "U-numero": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

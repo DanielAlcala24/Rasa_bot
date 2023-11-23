@@ -1,0 +1,29 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_nombre\"}}]": "utter_respuesta_opcion_1_correo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_nombre\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1_correo\"}, \"user\": {\"intent\": \"proporcionar_nombre\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_edad\"}}]": "utter_respuesta_opcion_1_nacimiento",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_edad\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1_nacimiento\"}, \"user\": {\"intent\": \"proporcionar_edad\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_nacimiento\"}}]": "utter_respuesta_opcion_1_horario",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_nacimiento\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1_horario\"}, \"user\": {\"intent\": \"proporcionar_nacimiento\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"respuesta_opcion_1\"}}]": "utter_respuesta_opcion_1",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"respuesta_opcion_1\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1\"}, \"user\": {\"intent\": \"respuesta_opcion_1\"}}]": "utter_respuesta_opcion_1_nombre",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"respuesta_opcion_1\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1\"}, \"user\": {\"intent\": \"respuesta_opcion_1\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1_nombre\"}, \"user\": {\"intent\": \"respuesta_opcion_1\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_horario\"}}]": "utter_respuesta_opcion_1_estudias",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_horario\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1_estudias\"}, \"user\": {\"intent\": \"proporcionar_horario\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saludo_opciones\"}}]": "utter_saludo_opciones",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saludo_opciones\"}}, {\"prev_action\": {\"action_name\": \"utter_saludo_opciones\"}, \"user\": {\"intent\": \"saludo_opciones\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_correo\"}}]": "utter_respuesta_opcion_1_edad",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"proporcionar_correo\"}}, {\"prev_action\": {\"action_name\": \"utter_respuesta_opcion_1_edad\"}, \"user\": {\"intent\": \"proporcionar_correo\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

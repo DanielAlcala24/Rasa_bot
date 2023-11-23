@@ -1,0 +1,317 @@
+version: "3.1"
+
+nlu:
+- intent: saludo_opciones
+  examples: |
+    - ¡Hola!
+    - hola
+    - buenos días
+    - saludos
+    - hola que tal
+    - buen día
+    - hola buen día
+    - quisiera información
+    - menú
+    - opciones
+    - ¿qué puedo hacer?
+    - informes
+    - informacion
+    - ayuda
+    - ¿que te puedo preguntar?
+    - ¿que mas te puedo preguntar?
+    - ¿puedes ayudarme?
+    - Hola buenas noches, escuché un comentario que están contratando y la verdad me encuentro en búsqueda de empleo quería saber si me pueden dar información por favor
+    - ¿podrías ayudarme?
+    - ¿te gustaría ayudarme?
+    - ¿hay alguna forma de contactarte con ustedes?
+    - ¿cómo me puedo poner en contacto contigo?
+    - hola, vi la vacante en internet, me interesa
+    - hola, estoy buscando una vacante para trabajar
+    - hola, tengo un problema y necesito ayuda
+
+- intent: inform
+  examples: |
+    - [Juan Manuel Vazquez Cruz](nombre)
+    - [Luis Antonio Garcia Martinez](nombre)
+    - [Maria Jose Fernandez Rodriguez](nombre)
+    - [Jose Luis Sanchez Moreno](nombre)
+    - [María Dolores Sánchez Jiménez](nombre)
+    - [Carlos Eduardo Lopez Ramirez](nombre)
+    - [Sandra Maria Gutierrez Diaz](nombre)
+    - [Ana Maria Hernandez Garcia](nombre)
+    - [Ricardo Martin Perez](nombre)
+    - [Isabella Maria Gomez Garcia](nombre)
+    - [Francisco Javier Sanchez Garcia](nombre)
+    - [Laura Andrea Garcia Martinez](nombre)
+    - [Antonio Carlos Garcia Rodriguez](nombre)
+    - [Manuel Alejandro Garcia Martinez](nombre)
+    - [Cristina Maria Garcia Martinez](nombre)
+    - [Daniela Maria Garcia Martinez](nombre)
+    - [Alvaro Antonio Garcia Martinez](nombre)
+    - [Natalia Maria Garcia Martinez](nombre)
+    - [Oscar Antonio Garcia Martinez](nombre)
+    - [Gabriel Antonio Garcia Martinez](nombre)
+    - [Pablo Antonio Garcia Martinez](nombre)
+    - [Eva Maria Garcia Martinez](nombre)
+    - [Felipe Antonio Garcia Martinez](nombre)
+    - [Victor Antonio Garcia Martinez](nombre)
+    - [Andrea Maria Garcia Martinez](nombre)
+    - [Diana Maria Garcia Martinez](nombre)
+    - mi nombre es [Carlos Esteban García Luna](nombre)
+    - mi nombre es [Jorge Andrés Pérez Castellanos](nombre)
+    - mi nombre es [Estefania Patricia Mendoza Torres](nombre)
+    - mi nombre es [Alexander Daniel Guzmán Rivera](nombre)
+    - mi nombre es [Adriana Lorena Pineda Cano](nombre)
+    - mi nombre es [Yolanda Gabriela Barrios Rosas](nombre)
+    - mi nombre es [José Antonio González Velázquez](nombre)
+    - mi nombre es [Ivonne Margarita Rangel Florez](nombre)
+    - mi nombre es [Karen Elisa Arredondo Medina](nombre)
+    - nombre [Sebastian Cesar Vega Castro](nombre)
+    - nombre [Julio David Montoya Montañez](nombre)
+    - nombre [Fernando Arturo Alvarez Garcia](nombre)
+    - nombre [Jesus Antonio Lopez Avila](nombre)
+    - nombre [Samantha Beatriz Valdez Garcia](nombre)
+    - nombre [Bryan Alexander Garcia Garcia](nombre)
+    - nombre [Paulino Antonio Garcia Garcia](nombre)
+    - nombre [Jessica Paola Garcia Garcia](nombre)
+    - nombre [Jonathan Antonio Garcia Garcia](nombre)
+    - nombre [Angelica Ana Garcia Garcia](nombre)
+    - [carlos daniel alcalá villegas](nombre)
+    - [juan manuel hernandez hernandez](nombre)
+    - [marcos andres perez garcía](nombre)
+    - mi nombre es [christian mejia lopez lopez](nombre)
+    - [Carlos Daniel Alcalá Villegas](nombre)
+    - [gagarmartinez@gmail.com](correo)
+    - [joseantonio@hotmail.com](correo)
+    - [estefaniamp@outlook.com](correo)
+    - [dianamaria@yahoo.com](correo)
+    - [carloseduardo@gmail.com](correo)
+    - [jorgeandresperezcastellanos@gmail.com](correo)
+    - [adrianalorena@gmail.com](correo)
+    - [alexguzmanrivera@gmail.com](correo)
+    - [ivonnemargaritarrangel@gmail.com](correo)
+    - [karenelisamarial@gmail.com](correo)
+    - [sebastiangarciagarcia@gmail.com](correo)
+    - [juliomontoyamontanez@gmail.com](correo)
+    - [fernandomarcoalvarengarcia@gmail.com](correo)
+    - [jesuslopezavilajimenez@gmail.com](correo)
+    - [samanthavaldecigarcia@gmail.com](correo)
+    - [bryanggarcigarcía@gmail.com](correo)
+    - [paulinogarciagarcia@gmail.com](correo)
+    - [jessicapagariagarcia@gmail.com](correo)
+    - [jonathangarciagarcia@gmail.com](correo)
+    - [angelicalgarciagarcia@gmail.com](correo)
+    - correo [gagarmartinez@gmail.com](correo)
+    - correo [joseantonio@hotmail.com](correo)
+    - correo [estefaniamp@outlook.com](correo)
+    - correo [dianamaria@yahoo.com](correo)
+    - correo [carloseduardo@gmail.com](correo)
+    - correo [jorgeandresperezcastellanos@gmail.com](correo)
+    - correo [adrianalorena@gmail.com](correo)
+    - correo [alexguzmanrivera@gmail.com](correo)
+    - correo [ivonnemargaritarrangel@gmail.com](correo)
+    - correo [karenelisamarial@gmail.com](correo)
+    - correo [sebastiangarciagarcia@gmail.com](correo)
+    - correo [juliomontoyamontanez@gmail.com](correo)
+    - mi correo es [danielcabrera@gmail.com](correo)
+    - mi dirección de correo electrónico es [danielcabrera@gmail.com](correo)
+    - mi email es [danielcabrera@gmail.com](correo)
+    - mi correo electronico es [danielcabrera@gmail.com](correo)
+    - [daniel7832562561@gmail.com](correo)
+    - [danielavddhd3422@gmail.com](correo)
+    - [daniel_alcala.av@gmail.com](correo)
+    - mi edad [15 años](edad)
+    - mi edad [16 años](edad)
+    - mi edad [17 años](edad)
+    - mi edad [18 años](edad)
+    - mi edad [19 años](edad)
+    - mi edad [20 años](edad)
+    - mi edad [21 años](edad)
+    - mi edad [22 años](edad)
+    - mi edad [23 años](edad)
+    - mi edad [24 años](edad)
+    - mi edad [25 años](edad)
+    - mi edad [26 años](edad)
+    - mi edad [27 años](edad)
+    - mi edad [28 años](edad)
+    - mi edad [29 años](edad)
+    - mi edad [30 años](edad)
+    - mi edad [31 años](edad)
+    - mi edad [32 años](edad)
+    - mi edad [33 años](edad)
+    - mi edad [34 años](edad)
+    - mi edad [35 años](edad)
+    - mi edad [36 años](edad)
+    - mi edad [37 años](edad)
+    - mi edad [38 años](edad)
+    - mi edad [39 años](edad)
+    - mi edad [40 años](edad)
+    - tengo [15 años](edad)
+    - tengo [16 años](edad)
+    - tengo [17 años](edad)
+    - tengo [18 años](edad)
+    - tengo [19 años](edad)
+    - tengo [20 años](edad)
+    - tengo [21 años](edad)
+    - tengo [22 años](edad)
+    - tengo [23 anios](edad)
+    - tengo [24 anios](edad)
+    - tengo [25 anios](edad)
+    - tengo [26 anios](edad)
+    - tengo [27 anios](edad)
+    - tengo [28 anios](edad)
+    - tengo [29 anios](edad)
+    - tengo [30 años](edad)
+    - tengo [31 años](edad)
+    - tengo [32 años](edad)
+    - tengo [33 años](edad)
+    - tengo [34 años](edad)
+    - tengo [35 años](edad)
+    - tengo [36 años](edad)
+    - tengo [37 años](edad)
+    - mi fecha de nacimiento es el [28 de noviembre del 2000](nacimiento)
+    - [30 de enero de 1999](nacimiento)
+    - [31 de diciembre de 1998](nacimiento)
+    - [31 de marzo de 1997](nacimiento)
+    - nací el [10 de abril de 1998](nacimiento)
+    - nací el [29 sepriembre 2001](nacimiento)
+    - nací el [29 febrero 2001](nacimiento)
+    - nací el [23 octubre 2001](nacimiento)
+    - nací el [28 de mayo de 1998](nacimiento)
+    - nací el [28 de septiembre de 2000](nacimiento)
+    - nací el [18/10/1999](nacimiento)
+    - nací el [18-octubre-1999](nacimiento)
+    - nací el [18.octubre.1999](nacimiento)
+    - nací el [28-11-2001](nacimiento)
+    - nací el [28-noviembre-2001](nacimiento)
+    - nací el [28 de noviembrero de 2001](nacimiento)
+    - nací el [21-10-1998](nacimiento)
+    - mi número es [5546297465](numero)
+    - mi número telefónico es [5529576432](numero)
+    - mi número celular es [5546297465](numero)
+    - mi numero es [55-35-47-09-54](numero)
+    - mi celular es [5597584653](numero)
+    - mi teléfono es [5529576432](numero)
+    - mi nombre es [Juan Carlos Sánchez Ramírez](nombre) tengo [22 años](edad) y mi numero celular es [5567450375](numero)
+    - [5547635421](numero)
+    - [5546297465](numero)
+    - [5529576432](numero)
+    - me llamo [Esteban Rmirez Crúz](nombre), nací el [24 octubre 2001](nacimiento) y mi numero es [5563981047](numero)
+    - [Horario completo](horario)
+    - [Fines de semana](horario)
+    - [Part time](horario)
+    - [Si estudio](estudio)
+    - [No estudio](estudio)
+    - [Constancia actualizada](constancia)
+    - [Constancia desactualizada](constancia)
+    - [Si lo tengo](rfc)
+    - [No lo tengo](rfc)
+
+- intent: respuesta_opcion_1
+  examples: |
+    - uno
+    - una
+    - primer
+    - primera
+    - primero
+    - opción uno
+    - opción uno de la lista
+    - opción uno del menu
+    - opción uno del menú
+    - opción uno en el menú
+    - opción uno en el listado
+    - opción uno en la lista
+    - iniciar proceso de selección
+    - proceso de selección
+    - inicio de proceso de selección
+    - comienzo de proceso de selección
+    - comenzamos con el proceso de selección
+    - empezamos con el proceso de selección
+    - empieza el proceso de selección
+    - agendar una entrevista
+    - entrevista
+    - agendar una cita
+    - cita
+    - estoy interesada en el puesto
+    - estoy interesado en el puesto
+    - quiero el puesto
+    - estoy interesado en el trabajo
+    - estoy interesada en el trabajo
+    - me gustaría trabajar aquí
+    - me gustaría trabajar para ustedes
+    - quiero trabajar
+    - quiero unirme
+    - quiero ser parte
+    - quiero formar parte
+    - quiero participar
+    - ¿que datos necesitas?
+    - ¿que documentos te envío?
+    - me interesa
+    - me interesa este trabajo
+    - me interesa este puerto
+    - me interesa este cargo
+    - me interesa este empleo
+    - me interesa este oficio
+
+- intent: respuesta_opcion_2
+  examples: |
+    - dos
+    - segundo
+    - segunda
+    - segundos
+    - opción dos
+    - opción dos de la lista
+    - opción dos del menu
+    - opción dos del menú
+    - opción dos en el menú
+    - opción dos en el listado
+    - opción dos en la lista
+    - informes de vacantes
+    - informacion de vacantes
+    - vacantes disponibles
+    - vacante disponible
+    - vacante actual
+    - vacante actualizada
+    - vacante actualizadas
+    - vacantes
+    - vacancias
+    - vacancias disponibles
+    - vacancias disponibles para contratar
+    - puesto
+    - puestos
+    - puestos de trabajo
+    - ¿cuales son los puestos?
+
+- intent: respuesta_opcion_3
+  examples: |
+    - tres
+    - tercero
+    - tercera
+    - terceros
+    - opción tres
+    - opción tres de la lista
+    - opción tres del menu
+    - opción tres del menú
+    - opción tres en el menú
+    - opción tres en el listado
+    - opción tres en la lista
+    - informacion de los parques
+    - ubicación de parques
+    - ubicación de los parques
+    - ubicacion de las sucursales
+    - sucursales
+    - donde se encuentran los parques
+    - donde estan los parques
+    - donde esta el parque
+    - donde esta el parque más cercano
+    - donde esta el parque más cerca
+    - atracciones
+
+- intent: out_of_scope
+  examples: |
+    - ¿quien es el presidente?
+    - ¿tienes platano?
+    - ¿te gusta comer?
+    - quiero ordenar comida
+    - como me voy a llevar al supermercado
+    - ¿cuanto es 2 + 2?

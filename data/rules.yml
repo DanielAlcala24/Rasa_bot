@@ -1,0 +1,29 @@
+version: "3.1"
+
+rules:
+  - rule: Responder a Saludo con Menú de Opciones 
+    steps:
+      - intent: saludo_opciones
+      - action: utter_saludo_opciones
+
+  - rule: out-of-scope
+    steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+
+  - rule: activar loop del formulario opcion 1
+    steps: 
+    - intent: respuesta_opcion_1
+    - action: utter_respuesta_opcion_1
+    - action: simple_form
+    - active_loop: simple_form
+
+  - rule: mandar formulario
+    condition:
+    - active_loop: simple_form
+    steps:
+    - action: simple_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_say_data

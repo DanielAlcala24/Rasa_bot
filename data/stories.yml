@@ -1,0 +1,22 @@
+version: "3.1"
+
+stories:
+
+  - story: Saludo
+    steps:
+      - intent: saludo_opciones
+      - action: utter_saludo_opciones
+      
+  - story: Opciones 2
+    steps:
+      - intent: saludo_opciones
+      - action: utter_saludo_opciones
+      - intent: respuesta_opcion_2
+      - action: utter_respuesta_opcion_2
+
+  - story: Opciones 3
+    steps:
+      - intent: saludo_opciones
+      - action: utter_saludo_opciones
+      - intent: respuesta_opcion_3
+      - action: utter_respuesta_opcion_3

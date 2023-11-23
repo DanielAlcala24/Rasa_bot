@@ -1,0 +1,234 @@
+version: '3.1'
+
+intents:
+- inform
+- respuesta_opcion_1
+- respuesta_opcion_2
+- respuesta_opcion_3
+- saludo_opciones
+- out_of_scope
+
+entities:
+- nombre
+- correo
+- edad
+- nacimiento
+- numero
+- horario
+- estudio
+- constancia
+- rfc
+
+slots:
+  nombre:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nombre
+
+  correo:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: correo
+
+  edad:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: edad
+
+  nacimiento:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nacimiento
+
+  numero:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: numero
+
+  horario:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: horario
+
+  estudio:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: estudio
+
+  constancia:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: constancia
+
+  rfc:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: rfc
+
+forms:
+  simple_form:
+    required_slots:
+      - nombre
+      - correo
+      - edad
+      - nacimiento
+      - numero
+      - horario
+      - estudio
+      - constancia
+      - rfc
+
+responses:
+  utter_saludo_opciones:
+  - text: Gracias por ponerte en contacto con el departamento de talento humano de jumpin. Te recordamos que nuestros horarios de atención es de lunes a viernes de 9am-6pm. Que deseas hacer?.
+    buttons: 
+    - title: "-Iniciar tu proceso de selección."
+      payload: "/respuesta_opcion_1"
+    - title: "-Informacion de nuestras vacantes."
+      payload: "/respuesta_opcion_2"
+    - title: "-Ubicación de nuestros parques."
+      payload: "/respuesta_opcion_3"
+
+  utter_out_of_scope:
+  - text: "Lo siento, no puedo contestar a eso. ¿Podrías repetir de favor?"
+
+  utter_respuesta_opcion_1:
+  - text: "vamos a comenzar tu proceso de seleccion por loq ue te pediremos algunos datos."
+
+  utter_ask_nombre:
+  - text: "¿Cuál es tu nombre completo?"
+
+  utter_ask_correo:
+  - text: "¿Cuál es tu direccion de correo?"
+
+  utter_ask_edad:
+  - text: "¿Cuál es tu edad? ingresa tu edad en seguida la palabra *años*"
+
+  utter_ask_nacimiento:
+  - text: "¿Cuál es tu fecha de nacimiento?. Ejemplo: *27 de enero del 2000*"
+
+  utter_ask_numero:
+  - text: "Cuál es tu número celular de contacto?"
+
+  utter_ask_horario:
+  - text: |
+      ¿Que horario es de tu interes?
+      - Horario completo (lunes a viernes de 1pm - 10pm. Sábado y domingo de 11am - 10pm. Dos días de descanso entre semana)
+      - Fines de semana (11am - 10pm)
+      - Part time (lunes a viernes de 3pm - 10pm. 1 día de descanso entre semana)
+    buttons:
+    - title: "Horario completo"
+      payload: Horario completo
+    - title: "Fines de semana"
+      payload: Fines de semana
+    - title: "Part time"
+      payload: Part time
+
+  utter_ask_estudio:
+  - text: "¿Te encuentras estudiando actualmente?"
+    buttons:
+    - title: "Si"
+      payload: Si estudio
+    - title: "No"
+      payload: No estudio
+
+  utter_ask_constancia:
+  - text: "¿Cuentas con constancia de situación fiscal con fecha de impresión al año 2022 en adelante? *Nota: es importante contar con tus documentos actualizados para evitar demoras con tu proceso de selección.*"
+    buttons:
+    - title: "Si"
+      payload: Constancia actualizada
+    - title: "No"
+      payload: Constancia desactualizada
+
+  utter_ask_rfc:
+  - text: "¿Cuentas con tu rfc? si no cuentas con tu constancia de situacion fiscal actualizada acude a la oficina más cercana a tu domicilio con tu rfc para obtenerla."
+    buttons:
+    - title: "Si"
+      payload: Si lo tengo
+    - title: "No"
+      payload: No lo tengo
+
+  utter_respuesta_opcion_2:
+  - text: |
+      En JUMP IN nos dedicamos al entretenimiento desde el año 2013, tenemos el concepto de Trampoline Park en México, con el objetivo de crear experiencias alrededor del País. Tenemos áreas de trampolines y atracciones para toda la familia, así como área de cafetería en todos nuestros parques.
+      Actualmente te presentamos los puestos que tenemos en nuestros parques, así como las actividades que realizan: 
+
+      	STAFF MULTIFUNCIONAL 
+        	Vigilancia en las áreas de atracciones trampolines 
+        	Servicio al cliente
+        	Limpieza de áreas comunes
+        	Realizar juegos y dinámicas con usuarios
+        	Ser anfitrión de fiestas y eventos
+        	Preparar el parque para su apertura y cierre
+        	Cuidar el correcto uso de las atracciones
+        	Verificación de las etiquetas de tiempo de los invitados
+        	Monitorea el cumplimiento de las medidas de seguridad dentro del parque
+        	Seguimiento a bitácoras de mantenimiento de atracciones
+
+      	LIMPIEZA 
+        	Aseo general del parque 
+        	Higiene constante de pisos
+        	Recolección de basura 
+        	Limpieza de baños de los clientes 
+        	Atención a clientes en las áreas comunes 
+
+      	PERSONA DE COCINA 
+        	Elaboración de comida rápida, bebidas y botanas 
+        	Limpieza y mantenimiento del área 
+        	Entrega de pedidos 
+        	Apoyo con el área de cafetería
+        	Administración de insumos en cocina 
+
+  utter_respuesta_opcion_3:
+  - text: |
+      Ubicación de nuestros parques. Actualmente contamos con 8 sucursales en la CDMX y 1 sucursal foranea en cuernavaca a continuacion te proporciono la ubicación de cada una da ellas.
+      📌MIRAMONTES: Canal de Miramontes 2053, Coapa, Las Campañas, Coyoacán, 04650 Ciudad de México, CDMX. 📍Ubicación maps: https://maps.app.goo.gl/mtnbMaLqeFsCS5BPA
+      📌CHURUBUSCO: Cto Interior Avenida Río Churubusco 1072-11-B, Nueva Rosita, Iztapalapa, 09420 Ciudad de México, CDMX. 📍Ubicación maps: https://maps.app.goo.gl/3txvvh5N1fyDLGWL7
+      📌INTERLOMAS: Blvrd. Interlomas 7-LOCAL AN2-13, Lomas Country Club, 52779 Naucalpan de Juárez, Méx. 📍Ubicación maps: https://maps.app.goo.gl/GKBZdJrAoLNMMwtC9
+      📌SATÉLITE: Av. Circuito Centro comercial # 2251 local SA-12, segundo piso, Cd. Satélite, 53100 Naucalpan de Juárez, Méx. 📍Ubicación maps: https://maps.app.goo.gl/m2tWbSrM4mUkUy4g6
+      📌COACALCO: Av. José López Portillo 145, huizachitla, 55714 San Francisco Coacalco, Méx. 📍Ubicación maps: https://maps.app.goo.gl/LsrkWbd2RARuChKw5
+      📌CÚSPIDE: Sky Mall, La Cuspide, 53124 Naucalpan de Juárez, Méx., México Naucalpan de Juárez Edo, 53126 Naucalpan de Juárez. 📍Ubicación maps: https://maps.app.goo.gl/6nJ8nzKmWBNX9cMfA
+      📌ECATEPEC: Av. Insurgentes Manzana 138 Lote 1 Local SA-11 Conjunto Urbano, Las Américas, 55076 Ecatepec de Morelos, Méx. 📍Ubicación maps: https://maps.app.goo.gl/oe9bSuRqoGPVMEVw7
+      📌VALLEJO: Calzada Vallejo 1090 , Piso 2 Local 2017-210, Sta Cruz de las Salinas, Azcapotzalco, 02340 CDMX 📍Ubicación maps: https://maps.app.goo.gl/UHsnxW5VZst4VKLPA
+      📌CUERNAVACA: Plaza Forum Cuernavaca -Calle Jacarandas 103 Local PE -35C, Ricardo Flores Magon, 62376 Cuernavaca, Mor. 📍Ubicación maps: https://maps.app.goo.gl/X1YxhCB3mDLfxtS27
+
+      Para más información acerca de nuestras atracciones o alguna otra relacionadas con los parques visita nuestra pagina web: www.jumpin.com.mx
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- utter_saludo_opciones
+- utter_respuesta_opcion_1
+- utter_respuesta_opcion_2
+- utter_respuesta_opcion_3
+- utter_out_of_scope
+- utter_ask_nombre
+- utter_ask_correo
+- utter_ask_edad
+- utter_ask_nacimiento
+- utter_ask_numero
+- utter_ask_horario
+- utter_ask_estudio
+- utter_ask_constancia
+- utter_ask_rfc
+- action_say_data
